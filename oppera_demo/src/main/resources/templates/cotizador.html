@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oppera | Cotizador</title>
+  <link rel="stylesheet" href="/css/cotizador.css" />
+  <link rel="stylesheet" href="/css/stylecabecerapie.css" />
+  <!-- Tipografia -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Jost:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <!-- Framework Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+
+  <!-- Libreria del calendario -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.11/index.global.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.11/index.global.min.js"></script>
+</head>
+
+<body style="padding-top: 70px;">
+
+  <header th:replace="~{/fragments/template :: header('cotizador')}" ></header>
+  <!-- Menú de navegación con Bootstrap -->
+  <!-- <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-3" href="#">Oppera</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./inicio.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Cotizador</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contactanos.html">Contáctanos</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" href="./testimonios.html">Reseñas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header> -->
+
+  <section id="cotizador" class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold">Cotizador de Servicios</h2>
+      <p class="lead text-muted">
+        Calcula el costo aproximado según la cantidad de personal y las horas del evento.
+      </p>
+    </div>
+
+    <!-- Calendario -->
+    <div class="bloque-calendario mb-5 p-4 bg-light rounded shadow-sm">
+      <h3 class="tituloCalendario h4 mb-3">Elige la fecha de tu evento</h3>
+      <div id="calendario"></div>
+      <p id="fecha-elegida-texto" class="fecha-elegida-texto mt-3 fw-semibold text-primary"></p>
+    </div>
+
+    <!-- Tarjetas de Precios con Bootstrap Grid -->
+    <div class="row row-cols-1 row-cols-md-4 mb-4 text-center">
+
+      <!-- Acomodadores -->
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">🎭 Acomodadores</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">S/35 <small class="text-body-secondary fw-light">/hora</small>
+            </h1>
+            <p class="descripcion-servicio mt-3 mb-4">
+              Reciben al público y los guían hacia sus ubicaciones dentro del evento.
+            </p>
+            <div class="campo-formulario text-center">
+              <label for="acomodadores" class="form-label d-block">Cantidad:</label>
+              <input type="number" id="acomodadores" class="entrada-formulario form-control mb-3 text-center mx-auto"
+                style="max-width: 120px;" min="0" value="0">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Anfitriones -->
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">👔 Anfitriones</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">S/45 <small class="text-body-secondary fw-light">/hora</small>
+            </h1>
+            <p class="descripcion-servicio mt-3 mb-4">
+              Brindan orientación, atención al público y apoyo en la experiencia de los asistentes.
+            </p>
+            <div class="campo-formulario text-center">
+              <label for="anfitriones" class="form-label d-block">Cantidad:</label>
+              <input type="number" id="anfitriones" class="entrada-formulario form-control mb-3 text-center mx-auto"
+                style="max-width: 120px;" min="0" value="0">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Escáner QR -->
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">📱 Escáner QR</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">S/30 <small class="text-body-secondary fw-light">/hora</small>
+            </h1>
+            <p class="descripcion-servicio mt-3 mb-4">
+              Verifican entradas digitales y agilizan el control de acceso al evento.
+            </p>
+            <div class="campo-formulario text-center">
+              <label for="qr" class="form-label d-block">Cantidad:</label>
+              <input type="number" id="qr" class="entrada-formulario form-control mb-3 text-center mx-auto"
+                style="max-width: 120px;" min="0" value="0">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Orientadores -->
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">🧭 Orientadores</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">S/25 <small class="text-body-secondary fw-light">/hora</small>
+            </h1>
+            <p class="descripcion-servicio mt-3 mb-4">
+              Ayudan a los asistentes a ubicarse y resolver consultas durante el evento.
+            </p>
+            <div class="campo-formulario text-center">
+              <label for="orientadores" class="form-label d-block">Cantidad:</label>
+              <input type="number" id="orientadores" class="entrada-formulario form-control mb-3 text-center mx-auto"
+                style="max-width: 120px;" min="0" value="0">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Campo de Horas y Botones -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6 campo-formulario text-center">
+        <div class="card p-4 shadow-sm">
+          <label for="horas" class="form-label fw-bold d-block">⏱️ Horas del evento</label>
+          <input type="number" id="horas" class="entrada-formulario form-control mb-3 text-center mx-auto"
+            style="max-width: 120px;" min="1" value="0">
+          <p class="descripcion-servicio text-muted mb-4">
+            Indica la duración total de horas estimada de tu evento.
+          </p>
+
+          <button class="boton-cotizar btn btn-lg w-100 mb-3"
+            style="background-color: #C5A059; border-color: #C5A059; color: white;" onclick="calcularCotizacion()">
+            Calcular cotización
+          </button>
+
+          <div class="resultado-cotizacion oculto alert alert-success" id="resultado">
+            <div id="precio"></div>
+          </div>
+
+          <a href="#" id="btnWhatsApp" class="boton-contacto-cotizador btn w-100"
+            style="background-color: #C5A059; border-color: #C5A059; color: white;">
+            SOLICITAR ASESORÍA
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resultados -->
+    <div class="resultado-cotizacion oculto alert alert-success shadow-sm" id="resultado" role="alert">
+      <div id="precio"></div>
+    </div>
+
+  </section>
+
+  <footer th:replace="/fragments/template :: footer"></footer>
+
+  <!-- <footer>
+    <div class="footer-contenedor">
+      <div class="footer-col">
+        <span class="footer-logo">Oppera</span>
+        <p>
+          Personal especializado para teatros, conciertos y eventos,
+          ofreciendo una atención elegante y profesional en todo el Perú.
+        </p>
+        <div class="footer-redes">
+          <a href="https://www.facebook.com/p/opperape-61553258675941/" aria-label="Facebook">
+            <img width="16px" src="img/facebook.png" alt="facebook" />
+          </a>
+          <a href="https://www.instagram.com/oppera.pe/" aria-label="Instagram">
+            <img width="16px" src="img/instagram.png" alt="instagram" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="servicios.html">Anfitriones</a></li>
+          <li><a href="servicios.html">Acomodadores</a></li>
+          <li><a href="servicios.html">Escáner QR</a></li>
+          <li><a href="servicios.html">Orientadores</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="cotizador.html">Cotizador</a></li>
+          <li><a href="contactanos.html">Contáctanos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <ul class="footer-contacto">
+          <li>Lima, Perú</li>
+          <li>+51 998 976 954</li>
+          <li>contacto@oppera.pe</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Oppera. Todos los derechos reservados.</p>
+    </div>
+  </footer> -->
+
+  <script>
+    const fechasOcupadas = ["2026-07-10", "2026-07-15", "2026-07-22"];
+    let mensajeCotizacion = "";
+    let fechaEvento = null;
+    let celdaSeleccionada = null;
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const calendarEl = document.getElementById("calendario");
+
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: "dayGridMonth",
+        locale: "es",
+        height: "auto",
+
+        events: fechasOcupadas.map((fecha) => ({
+          title: "Ocupado",
+          start: fecha,
+          allDay: true,
+          color: "red",
+        })),
+
+        dateClick: function (info) {
+          if (fechasOcupadas.includes(info.dateStr)) {
+            alert("Lo sentimos, esa fecha ya está ocupada.");
+            return;
+          }
+
+          if (celdaSeleccionada) {
+            celdaSeleccionada.classList.remove("fecha-seleccionada");
+          }
+
+          celdaSeleccionada = info.dayEl;
+          celdaSeleccionada.classList.add("fecha-seleccionada");
+
+          fechaEvento = info.dateStr;
+
+          document.getElementById("fecha-elegida-texto").textContent =
+            "Fecha seleccionada: " +
+            new Date(fechaEvento + "T00:00:00").toLocaleDateString("es-PE");
+        },
+      });
+
+      calendar.render();
+    });
+
+    function calcularCotizacion() {
+      if (!fechaEvento) {
+        alert("Primero selecciona la fecha de tu evento en el calendario.");
+        return;
+      }
+      let horas = parseInt(document.getElementById("horas").value);
+      let acomodadores = parseInt(
+        document.getElementById("acomodadores").value,
+      );
+      let anfitriones = parseInt(
+        document.getElementById("anfitriones").value,
+      );
+      let qr = parseInt(document.getElementById("qr").value);
+      let orientadores = parseInt(
+        document.getElementById("orientadores").value,
+      );
+
+      if (
+        acomodadores == 0 &&
+        anfitriones == 0 &&
+        qr == 0 &&
+        orientadores == 0
+      ) {
+        alert("Debe seleccionar al menos un servicio.");
+        return;
+      }
+
+      let total =
+        acomodadores * 35 * horas +
+        anfitriones * 45 * horas +
+        qr * 30 * horas +
+        orientadores * 25 * horas;
+
+      let detallePersonal = [];
+
+      if (acomodadores > 0)
+        detallePersonal.push(acomodadores + " Acomodadores");
+      if (anfitriones > 0) detallePersonal.push(anfitriones + " Anfitriones");
+      if (qr > 0) detallePersonal.push(qr + " Escáners QR");
+      if (orientadores > 0)
+        detallePersonal.push(orientadores + " Orientadores");
+
+      const opciones = {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        weekday: "long",
+      };
+      const fechaFormateada = new Date(
+        fechaEvento + "T00:00:00",
+      ).toLocaleDateString("es-PE", opciones);
+
+      document.getElementById("precio").innerHTML =
+        "<strong>Fecha del evento:</strong> " +
+        fechaFormateada +
+        "<br>" +
+        "<strong>Personal solicitado:</strong> " +
+        detallePersonal.join(", ") +
+        "<br>" +
+        "<strong>Total estimado:</strong> S/ " +
+        total;
+
+      mensajeCotizacion = `Hola, me gustaría solicitar asesoría para mi evento.\n\nFecha del evento: ${fechaFormateada}\n\nPersonal solicitado:\n- ${detallePersonal.join("\n- ")}\n\nHoras del evento: ${horas}\n\nTotal estimado: S/ ${total}\n\nQuedo atento(a) a su respuesta. Muchas gracias. `;
+      document.getElementById("resultado").classList.remove("oculto");
+    }
+
+    document
+      .getElementById("btnWhatsApp")
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const numero = "51910611965";
+
+        let mensaje;
+
+        if (mensajeCotizacion !== "") {
+          mensaje = mensajeCotizacion;
+        } else {
+          mensaje =
+            "Hola, me gustaría recibir información y asesoría sobre los servicios que ofrece Oppera para eventos.";
+        }
+
+        const url =
+          "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+        window.open(url, "_blank");
+      });
+
+    console.log(encodeURIComponent("📅👥💰"));
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

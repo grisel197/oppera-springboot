@@ -1,0 +1,69 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-color: #c9a84c;
+  font-family: 'Nunito';
+}
+
+.contenedor-formulario {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+   border: none;      /*2px solid rgb(255, 255, 255); */
+  border-radius: 15px;
+  padding: 30px;
+  width: 300px;
+  box-sizing: border-box;
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+.contenedor-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.organizador {
+  padding: 10px;
+  border: 1px solid #c9a84c;
+  border-radius: 8px;
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+.organizador input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  outline: 0;
+  font-size: 14px;
+  color: #fff;
+  
+}
+
+.contenido input{
+  background-color: #c9a84c;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #c9a84c; 
+  border-radius: 8px;
+  background-color: #0a0a0a; 
+  color: #c9a84c;
+}
+
+form button:hover {
+  background-color: #333;
+  color: white;
+}

@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oppera | Servicios</title>
+  <link rel="stylesheet" href="/css/servicios.css" />
+  <link rel="stylesheet" href="/css/stylecabecerapie.css" />
+  <!-- Tipografia -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Jost:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <!-- Framework Boostrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+
+</head>
+
+<body>
+
+  <header th:replace="~{/fragments/template :: header('servicios')}" ></header>
+  <!-- Menú de navegación con Boostrap -->
+  <!-- <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-3" href="#">Oppera</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./inicio.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./cotizador.html">Cotizador</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contactanos.html">Contáctanos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./testimonios.html">Reseñas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header> -->
+
+  <section class="nuestros-servicios">
+    <h1>Nuestros servicios</h1>
+    <p>
+      Ofrecemos personal capacitado para garantizar el correcto desarrollo de
+      cualquier tipo de evento, brindando orden, atención y apoyo en cada
+      etapa.
+    </p>
+  </section>
+
+  <main>
+    <section class="tipo-servicio">
+      <!-- Carrusel Bootstrap para escritorio/tablet: avanza de 3 en 3 -->
+      <div id="serviciosCarouselDesktop" class="carousel slide carousel-dark servicios-carousel d-none d-md-block">
+
+
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+
+              <div class="col">
+                <div class="card servicio-card h-100">
+                  <img src="img/grillaImg4.jpg" class="card-img-top" alt="Acomodadores" />
+                  <div class="card-body">
+                    <h2 class="card-title">Acomodadores</h2>
+                    <p class="card-text">
+                      Organizan el ingreso y ubicación de los asistentes de
+                      manera fluida, manteniendo el orden del evento.
+                    </p>
+                    <a href="cotizador.html" class="btn-cotizar">Ir a cotizar</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card servicio-card h-100">
+                  <img src="img/grillaImg2.jpg" class="card-img-top" alt="Anfitriones" />
+                  <div class="card-body">
+                    <h2 class="card-title">Anfitriones</h2>
+                    <p class="card-text">
+                      Personal capacitado para recibir a los invitados,
+                      brindar información y ofrecer una atención cordial.
+                    </p>
+                    <a href="cotizador.html" class="btn-cotizar">Ir a cotizar</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card servicio-card h-100">
+                  <img src="img/EscanerQR1.jpg" class="card-img-top" alt="Escáner QR" />
+                  <div class="card-body">
+                    <h2 class="card-title">Escáner QR</h2>
+                    <p class="card-text">
+                      Encargados del control de acceso mediante códigos QR,
+                      agilizando el ingreso y evitando aglomeraciones.
+                    </p>
+                    <a href="cotizador.html" class="btn-cotizar">Ir a cotizar</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+
+              <div class="col">
+                <div class="card servicio-card h-100">
+                  <img src="img/Logistica.jpg" class="card-img-top" alt="Asistentes" />
+                  <div class="card-body">
+                    <h2 class="card-title">Asistentes</h2>
+                    <p class="card-text">
+                      Apoyo en la logística y coordinación del evento,
+                      asegurando que todo funcione correctamente.
+                    </p>
+                    <a href="cotizador.html" class="btn-cotizar">Ir a cotizar</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card servicio-card h-100">
+                  <img src="img/Orientadores.jpg" class="card-img-top" alt="Orientadores" />
+                  <div class="card-body">
+                    <h2 class="card-title">Orientadores</h2>
+                    <p class="card-text">
+                      Guían e informan a los asistentes en todo momento,
+                      asegurando una experiencia cómoda y fluida en el evento.
+                    </p>
+                    <a href="cotizador.html" class="btn-cotizar">Ir a cotizar</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card servicio-card h-100">
+                  <img src="img/grillaImg8.jpg" class="card-img-top" alt="Asociación colectiva" />
+                  <div class="card-body">
+                    <h2 class="card-title">Asociación colectiva</h2>
+                    <p class="card-text">
+                      Apoyo en la organización grupal del personal para una
+                      mejor coordinación durante el evento.
+                    </p>
+                    <a href="cotizador.html" class="btn-cotizar">Ir a cotizar</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#serviciosCarouselDesktop" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Página 1"></button>
+          <button type="button" data-bs-target="#serviciosCarouselDesktop" data-bs-slide-to="1"
+            aria-label="Página 2"></button>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#serviciosCarouselDesktop"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#serviciosCarouselDesktop"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+
+      </div>
+
+      <!-- Carrusel Bootstrap para móvil: 1 card por slide -->
+      <div id="serviciosCarouselMobile" class="carousel slide carousel-dark servicios-carousel d-md-none">
+
+
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="card servicio-card">
+              <img src="img/grillaImg4.jpg" class="card-img-top" alt="Acomodadores" />
+              <div class="card-body">
+                <h2 class="card-title">Acomodadores</h2>
+                <p class="card-text">
+                  Organizan el ingreso y ubicación de los asistentes de
+                  manera fluida, manteniendo el orden del evento.
+                </p>
+                <a href="cotizador" class="btn-cotizar">Ir a cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card servicio-card">
+              <img src="img/grillaImg2.jpg" class="card-img-top" alt="Anfitriones" />
+              <div class="card-body">
+                <h2 class="card-title">Anfitriones</h2>
+                <p class="card-text">
+                  Personal capacitado para recibir a los invitados,
+                  brindar información y ofrecer una atención cordial.
+                </p>
+                <a href="cotizador" class="btn-cotizar">Ir a cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card servicio-card">
+              <img src="img/EscanerQR1.jpg" class="card-img-top" alt="Escáner QR" />
+              <div class="card-body">
+                <h2 class="card-title">Escáner QR</h2>
+                <p class="card-text">
+                  Encargados del control de acceso mediante códigos QR,
+                  agilizando el ingreso y evitando aglomeraciones.
+                </p>
+                <a href="cotizador" class="btn-cotizar">Ir a cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card servicio-card">
+              <img src="img/Logistica.jpg" class="card-img-top" alt="Asistentes" />
+              <div class="card-body">
+                <h2 class="card-title">Asistentes</h2>
+                <p class="card-text">
+                  Apoyo en la logística y coordinación del evento,
+                  asegurando que todo funcione correctamente.
+                </p>
+                <a href="cotizador" class="btn-cotizar">Ir a cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card servicio-card">
+              <img src="img/Orientadores.jpg" class="card-img-top" alt="Orientadores" />
+              <div class="card-body">
+                <h2 class="card-title">Orientadores</h2>
+                <p class="card-text">
+                  Guían e informan a los asistentes en todo momento,
+                  asegurando una experiencia cómoda y fluida en el evento.
+                </p>
+                <a href="cotizador" class="btn-cotizar">Ir a cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card servicio-card">
+              <img src="img/grillaImg8.jpg" class="card-img-top" alt="Asociación colectiva" />
+              <div class="card-body">
+                <h2 class="card-title">Asociación colectiva</h2>
+                <p class="card-text">
+                  Apoyo en la organización grupal del personal para una
+                  mejor coordinación durante el evento.
+                </p>
+                <a href="cotizador" class="btn-cotizar">Ir a cotizar</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#serviciosCarouselMobile" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#serviciosCarouselMobile" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#serviciosCarouselMobile" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#serviciosCarouselMobile" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#serviciosCarouselMobile" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#serviciosCarouselMobile" data-bs-slide-to="5"
+            aria-label="Slide 6"></button>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#serviciosCarouselMobile"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#serviciosCarouselMobile"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+
+      </div>
+    </section>
+  </main>
+
+  <footer th:replace="/fragments/template :: footer"></footer>
+
+  <!-- <footer>
+    <div class="footer-contenedor">
+
+      <div class="footer-col">
+        <span class="footer-logo">Oppera</span>
+        <p>
+          Personal especializado para teatros, conciertos y eventos,
+          ofreciendo una atención elegante y profesional en todo el Perú.
+        </p>
+        <div class="footer-redes">
+          <a href="https://www.facebook.com/p/opperape-61553258675941/" aria-label="Facebook">
+            <img width="16px" src="img/facebook.png" alt="facebook" />
+          </a>
+          <a href="https://www.instagram.com/oppera.pe/" aria-label="Instagram">
+            <img width="16px" src="img/instagram.png" alt="instagram" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="servicios.html">Anfitriones</a></li>
+          <li><a href="servicios.html">Acomodadores</a></li>
+          <li><a href="servicios.html">Escáner QR</a></li>
+          <li><a href="servicios.html">Orientadores</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="cotizador.html">Cotizador</a></li>
+          <li><a href="contactanos.html">Contáctanos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <ul class="footer-contacto">
+          <li>Lima, Perú</li>
+          <li>+51 998 976 954</li>
+          <li>contacto@oppera.pe</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Oppera. Todos los derechos reservados.</p>
+    </div>
+  </footer> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

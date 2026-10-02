@@ -1,0 +1,145 @@
+.nuestros-servicios{
+  margin-top:50px;
+  padding: 50px;
+  text-align: center;
+  background-color: #e8c97a;
+}
+.nuestros-servicios h1{
+  padding-bottom: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+article {
+ text-align: center;
+ border: none;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+ padding: 20px;
+ background-color: #e8c97a;
+ min-height: 250px;
+ display: flex;
+ flex-direction: column;
+ 
+ align-items: center;
+ border-radius: 10px;
+ justify-content: space-between;
+}
+.tipo-servicio {
+  text-align: center;
+  background-color: #c9a84c;
+  padding: 40px 40px 40px 40px;
+}
+.tipo-servicio h2{
+  font-size: 28px;
+  padding: 10px;
+  font-family: 'Nunito', sans-serif;
+}
+/* --- Card de servicio (Bootstrap .card + .servicio-card) --- */
+.card.servicio-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  background-color: #f2ddaa;
+  overflow: hidden;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.servicio-card .card-img-top {
+  height: 620px;
+  object-fit: cover;
+}
+
+.servicio-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.servicio-card .card-title {
+  font-size: 26px;
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.2;
+  margin: 0 0 10px 0;
+}
+
+.servicio-card .card-text {
+  margin: 0 0 20px 0;
+}
+
+/* --- Carrusel de servicios --- */
+.servicios-carousel .carousel-inner {
+  padding: 10px 0 20px 0;
+}
+
+.servicios-carousel .carousel-indicators {
+  position: static;
+  margin-top: 20px;
+}
+
+.servicios-carousel .carousel-indicators [data-bs-target] {
+  background-color: #1a1a1a;
+  opacity: 7;
+}
+
+.servicios-carousel .carousel-indicators .active {
+  background-color: #1a1a1a;
+  opacity: 10;
+}
+
+.servicios-carousel .carousel-control-prev,
+.servicios-carousel .carousel-control-next {
+  width: 5%;
+}
+
+/* En el carrusel móvil (1 card por slide) limitamos el ancho para que no quede gigante */
+#serviciosCarouselMobile .card.servicio-card {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Botón "Ir a cotizar" */
+.btn-cotizar {
+  display: inline-block;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 30px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.servicio-card .btn-cotizar {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.btn-cotizar:hover {
+  background-color: #C9A84C;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .tipo-servicio {
+    padding: 25px 20px 50px 20px;
+  }
+  .card.servicio-card {
+    height: 700px;
+    max-width: 700px;
+  }
+}
+
+
+@media (max-width: 1024px){
+  .tipo-servicio{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media (max-width: 768px){
+  .tipo-servicio{
+    grid-template-columns: 1fr;
+  }
+  
+}

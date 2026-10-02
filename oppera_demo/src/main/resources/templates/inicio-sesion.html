@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/inicio-sesion.css">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="contenedor-formulario">
+        <h2>Inicio de sesión</h2>
+        <form action="">            
+            <div class="organizador">
+                <input id="input-correo" class="contenido" type="email" placeholder="Ingrese su correo">
+            </div>
+            <div class="organizador">
+                <input id="input-contraseña" class="contenido" type="password" placeholder="Ingrese su contraseña"> 
+            </div>
+            
+            <button type="button" onclick="verificarLogin()" class="contenido">Ingresar</button>
+        </form>
+    </div>
+
+    <script th:inline="javascript">
+        const listaUsuarios= /*[[${usuarios}]]*/ [];
+
+        function verificarLogin(){
+            const correoIngresado = document.getElementById("input-correo").value.trim();
+            const contraseñaIngresada = document.getElementById("input-contraseña").value.trim();
+
+            let rolEncontrado = null;
+
+            for(let i=0; i < listaUsuarios.length ; i++){
+                const correoBD = listaUsuarios[i][0];
+                const contraseñaBD = listaUsuarios[i][1];
+                const rolBD = listaUsuarios[i][2];
+
+                if(correoIngresado === correoBD && contraseñaIngresada === contraseñaBD){
+                    rolEncontrado=rolBD
+                }
+            }
+
+            if (rolEncontrado === "administrador" || rolEncontrado === "usuario") {
+                alert('¡Inicio de sesión exitoso!');
+                window.location.href = "/inicio"; 
+            } else {
+                alert('Correo o contraseña incorrectos.');
+            }
+        }
+    </script>
+</body>
+</html>

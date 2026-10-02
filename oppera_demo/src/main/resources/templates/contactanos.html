@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oppera | Contáctanos</title>
+  <link rel="stylesheet" href="/css/contactanos.css" />
+  <link rel="stylesheet" href="/css/stylecabecerapie.css" />
+  <!-- Tipografia -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Jost:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <!-- Framework Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <header th:replace="~{/fragments/template :: header('contactanos')}" ></header>
+  <!-- Menú de navegación con Bootstrap -->
+  <!-- <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-3" href="#">Oppera</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./inicio.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./cotizador.html">Cotizador</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Contáctanos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./testimonios.html">Reseñas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header> -->
+
+  <section class="contacto">
+
+    <div class="contacto-texto">
+      <span class="detalle"></span>
+
+      <h2>Estamos listos para tu próximo evento</h2>
+
+      <p>
+        En Oppera contamos con personal capacitado para brindar una experiencia
+        organizada, elegante y profesional en cada presentación, función o evento.
+      </p>
+
+      <p>
+        Nuestro equipo de anfitriones, acomodadores y asistentes garantiza una
+        atención de alto nivel para que cada detalle de tu evento se desarrolle
+        correctamente.
+      </p>
+    </div>
+
+    <div class="formulario">
+
+      <div class="linea-dorada"></div>
+
+      <!-- Formulario con ID para controlarlo desde JavaScript -->
+      <form id="formContacto">
+
+        <div class="mb-3">
+          <label for="inputNombre" class="form-label">Nombres y apellidos</label>
+          <input type="text" class="form-control" id="inputNombre" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="inputEmail" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="nombre@ejemplo.com" required oninvalid="this.setCustomValidity('Escribe una dirección de correo válida por favor')" 
+          oninput="this.setCustomValidity('')">
+        </div>
+
+        <div class="mb-3">
+          <label for="servicio" class="form-label">Tipo de servicio</label>
+          <select class="form-select" id="servicio" aria-label="Default select example">
+            <option selected>Seleccione una opción</option>
+            <!-- Las opciones llegan desde el controlador (atributo "servicios"). Más adelante vendrán de la base de datos. -->
+            <option th:each="s : ${servicios}" th:value="${s}" th:text="${s}">Servicio</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="inputFecha" class="form-label">Fecha de reserva</label>
+          <input type="date" class="form-control" id="inputFecha" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Detalles del evento</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+        <!-- Botón tipo submit para que el navegador valide el "required" -->
+        <button type="submit" class="btn btn-primary boton">
+          Enviar solicitud
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- Ventana Modal de Bootstrap -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">¡Solicitud Enviada!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Hemos recibido los datos de tu evento correctamente. Nos pondremos en contacto contigo a la brevedad posible.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer th:replace="/fragments/template :: footer"></footer>
+
+  <!-- <footer>
+    <div class="footer-contenedor">
+
+      <div class="footer-col">
+        <span class="footer-logo">Oppera</span>
+        <p>
+          Personal especializado para teatros, conciertos y eventos,
+          ofreciendo una atención elegante y profesional en todo el Perú.
+        </p>
+        <div class="footer-redes">
+          <a href="https://www.facebook.com/p/opperape-61553258675941/" aria-label="Facebook">
+            <img width="16px" src="img/facebook.png" alt="facebook" />
+          </a>
+          <a href="https://www.instagram.com/oppera.pe/" aria-label="Instagram">
+            <img width="16px" src="img/instagram.png" alt="instagram" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="servicios.html">Anfitriones</a></li>
+          <li><a href="servicios.html">Acomodadores</a></li>
+          <li><a href="servicios.html">Escáner QR</a></li>
+          <li><a href="servicios.html">Orientadores</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="cotizador.html">Cotizador</a></li>
+          <li><a href="contactanos.html">Contáctanos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <ul class="footer-contacto">
+          <li>Lima, Perú</li>
+          <li>+51 998 976 954</li>
+          <li>contacto@oppera.pe</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Oppera. Todos los derechos reservados.</p>
+    </div>
+  </footer> -->
+
+  <!-- Bootstrap JS debe cargarse ANTES del script que usa "bootstrap.Modal" -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para controlar la validación y mostrar el modal automáticamente -->
+  <script>
+    document.getElementById("formContacto").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const miModal = new bootstrap.Modal(document.getElementById("exampleModal"));
+      miModal.show();
+    });
+  </script>
+</body>
+
+</html>

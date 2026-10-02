@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+.trayectoria, .clientes, .eligenos {
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* PAGE INICIO */
+h1 {
+  font-family: "Cormorant Garamond", serif;
+}
+p {
+  font-family: 'Jost', sans-serif;
+}
+
+/* ---- HEADER / CARRUSEL CON BOOTSTRAP ---- */
+.hero-carrusel {
+  width: 100%;
+  background-color: #0a0a0a;
+}
+
+.hero-carrusel .carousel,
+.hero-carrusel .carousel-inner,
+.hero-carrusel .carousel-item {
+  height: 700px;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+/* La imagen de fondo llena todo su slide */
+.bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Capa oscura sobre la imagen */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.35) 55%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+}
+
+/* Texto encima */
+.slide-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+  color: #fff;
+  opacity: 0;
+}
+
+.slide-content h1 {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+.slide-content .highlight {
+  color: #c9a84c;
+  font-style: italic;
+}
+.slide-content p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 24px;
+}
+.slide-content a {
+  display: inline-block;
+  padding: 13px 28px;
+  background: #c9a84c;
+  color: #0a0a0a;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+.slide-content-ancho {
+  max-width: 750px;
+}
+
+/* Animación del texto (se dispara sola cuando Bootstrap marca el slide como .active) */
+.carousel-item.active .slide-content {
+  animation: subirTexto 0.9s ease-out forwards;
+  animation-delay: 0.35s;
+}
+
+@keyframes subirTexto {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Botón "Contáctanos" animado */
+@keyframes moverBoton {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}
+.btn-animado {
+  animation: moverBoton 1.4s ease-in-out infinite;
+}
+
+/* Indicadores (puntitos) con tu dorado */
+.carousel-indicators [data-bs-target] {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.35);
+  border: none;
+  opacity: 1;
+}
+.carousel-indicators .active {
+  background-color: #c9a84c;
+}
+
+/* Flechas prev/next */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(1) brightness(1.3);
+  width: 22px;
+  height: 22px;
+}
+
+/* ---- TARJETAS DE TRAYECTORIA ---- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+  padding: 30px;
+}
+
+.tray-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 280px;
+  background-color: #0a0a0a;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.tray-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.tray-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.1) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.tray-card h3 {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  color: #fff;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+.tray-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.45);
+}
+.tray-card:hover img {
+  transform: scale(1.08);
+}
+
+.encabezado {
+  padding-top: 50px;
+  text-align: center;
+}
+.encabezado h2 {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+.encabezado p {
+  margin-top: 10px;
+}
+.trayectoria {
+  background-color: #c9a84c;
+  padding-bottom: 30px;
+}
+
+/* Botón galería */
+.btn-galeria {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 30px;
+  background-color: #0a0a0a;
+  color: #e8c97a;
+  border: 1px solid #0a0a0a;
+  border-radius: 5px;
+  font-family: "Jost", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+.btn-galeria span { margin-left: 8px; }
+.btn-galeria:hover {
+  background-color: #1a1a1a;
+  transform: scale(1.05);
+}
+
+/* ---- MODAL DE GALERÍA ---- */
+.modal-galeria {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.92);
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  z-index: 10000;
+}
+.modal-galeria.activo { display: flex; }
+.modal-contenido {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background-color: #0a0a0a;
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  border-radius: 12px;
+  padding: 35px 30px 30px;
+}
+.modal-contenido h3 {
+  text-align: center;
+  color: #c9a84c;
+  font-family: "Nunito", serif;
+  font-size: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+.cerrar-modal {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #e8c97a;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+.cerrar-modal:hover { color: #fff; }
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+.foto-galeria {
+  margin: 0;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+.foto-galeria img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+.foto-galeria figcaption {
+  padding: 8px 10px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+.paginacion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 25px;
+}
+.pag-btn {
+  background: transparent;
+  border: 1px solid rgba(201, 168, 76, 0.5);
+  color: #e8c97a;
+  padding: 6px 13px;
+  border-radius: 6px;
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+.pag-btn:hover:not(:disabled) {
+  background-color: rgba(201, 168, 76, 0.15);
+}
+.pag-btn.activo {
+  background-color: #c9a84c;
+  color: #0a0a0a;
+  font-weight: 600;
+}
+.pag-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+#numPagina {
+  color: #e8c97a;
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+/* ----SECCION ELIGENOS */
+.eligenos {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  gap: 20px;
+  text-align: center;
+  background-color: #c9a84c;
+}
+.eligenos h2 {
+  padding-top: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+.minicards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 15px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.minicard {
+  background-color: #0a0a0a;
+  border-radius: 14px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.minicard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+}
+.icono {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(201, 168, 76, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icono svg {
+  width: 28px;
+  height: 28px;
+  stroke: #c9a84c;
+  fill: none;
+  stroke-width: 1.6;
+}
+.minicard h3 {
+  color: #fff;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+.minicard p {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+  .modal-contenido {
+    padding: 25px 15px;
+  }
+  .foto-galeria img {
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .minicards {
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 15px 20px;
+    height: auto;
+  }
+  .hero-carrusel .carousel,
+  .hero-carrusel .carousel-inner,
+  .hero-carrusel .carousel-item {
+    height: 480px;
+  }
+  .slide-content {
+    padding: 0 30px;
+    text-align: center;
+    align-items: center;
+  }
+}

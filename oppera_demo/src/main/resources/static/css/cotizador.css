@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Paleta de colores
+negro: #0A0A0A
+blanco: #fff
+dorado: #C9A84C
+blanco ligeramente transparente:  rgba(255,255,255,0.8);
+*/
+/* Tipogragia
+elegante --> font-family: "Cormorant Garamond", serif;
+normal -->  font-family: 'Jost', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  background-color: #C9A84C !important;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+p {
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.8;
+}
+
+
+.fecha-seleccionada .fc-daygrid-day-number {
+  color: #0a0a0a;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+/*==========================================
+                COTIZADOR
+==========================================*/
+#cotizador{
+    width: 70%;
+    margin: 130px auto 80px;
+    background-color: #F5E3A7;
+    border: 2px solid #C9A84C;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+#cotizador h2{
+    text-align: center;
+    color: 0 4px 12px rgba(0, 0, 0, 0.25);
+    font-size: 42px;
+    margin-bottom: 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#cotizador p{
+    text-align: center;
+    margin-bottom: 35px;
+    color: #555;
+}
+
+.contenedor-cotizador{
+    background-color: #F5E3A7;;
+    border: 2px solid rgba(201,168,76,.5);
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    
+}
+
+.boton-contacto-cotizador{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 16px 36px;
+    background-color: #C9A84C;
+    color: #FFFDF8;
+    text-decoration: none;
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    border-radius: 4px;
+
+    animation: movimiento 1.2s infinite;
+
+    transition: background 0.3s, transform 0.3s;
+}
+
+.boton-contacto-cotizador:hover{
+    background: #e8c97a;
+}
+
+@keyframes movimiento{
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.09);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* Cada fila */
+
+
+.campo-formulario{
+    margin-bottom: 25px;
+}
+
+
+.cabecera-servicio{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.cabecera-servicio label{
+    font-weight: 600;
+    color: #0A0A0A;
+}
+
+.descripcion-servicio{
+    text-align: left !important;
+    margin-top: 5px;
+    margin-bottom: 0 !important;
+    margin-left: 0;
+    color: #555;
+    line-height: 1.4;
+}
+.campo-formulario label{
+    color:#0A0A0A;
+    font-weight:600;
+}
+
+.entrada-formulario{
+    width: 120px;
+    padding: 10px;
+    border:1.5px solid #C9A84C;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    outline: none;
+    transition: .3s;
+    font-family: 'Nunito', sans-serif;
+    background:#FFFDF8;
+    margin-top: 5px;
+}
+
+.entrada-formulario:focus{
+    border-color:#C9A84C;
+    box-shadow:0 0 6px rgba(201,168,76,.3);
+}
+
+/* Botón */
+
+.boton-cotizar{
+    width:100%;
+    margin-top:25px;
+    padding:14px;
+    background:#C9A84C;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.boton-cotizar:hover{
+    background:#b9922d;
+}
+
+/* Resultado */
+
+.resultado-cotizacion{
+    margin-top:30px;
+    background:#fafafa;
+    border-left:5px solid #C9A84C;
+    padding:20px;
+    border-radius:5px;
+}
+
+.resultado-cotizacion h3{
+    margin-bottom:15px;
+    color:#0A0A0A;
+}
+
+.resultado-cotizacion p{
+    text-align:left;
+    margin:8px 0;
+    color:#333;
+}
+
+.total{
+    margin-top:20px;
+    padding-top:15px;
+    border-top:1px solid #ddd;
+    font-size:24px;
+    font-weight:bold;
+    color:#C9A84C;
+    text-align:center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.oculto{
+    display:none;
+}
+
+
+/*==========================================
+            RESPONSIVE
+==========================================*/
+
+@media(max-width:768px){
+
+    #cotizador{
+        width:90%;
+        margin-top:250px;
+    }
+
+    .campo-formulario{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .campo-formulario label{
+        width:100%;
+        margin-bottom:8px;
+    }
+
+    .entrada-formulario{
+        width:100%;
+    }
+
+}
+
+
+
+
+/* Footer */
+footer {
+  background-color: #0A0A0A;
+  border-top: 1px solid rgba(201, 168, 76, 0.3);
+  padding: 15px;
+}
+.footer-contenedor {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0a0a0a;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.columna2 ul{
+  list-style: none;
+}
+
+.columna1,
+.columna2,
+.columna3 {
+  text-align: center;
+  width: 30%;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 15px;
+}
+
+/*==========================================
+        CALENDARIO DE DISPONIBILIDAD
+==========================================*/
+.bloque-calendario{
+    background:#FFFDF8;
+    border:1.5px solid rgba(201,168,76,.5);
+    border-radius:10px;
+    padding:30px;
+    margin-bottom:35px;
+    box-shadow:0 6px 16px rgba(0,0,0,.08);
+}
+
+.bloque-calendario h3{
+    font-family:'Jost', sans-serif;
+    font-size:17px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#C9A84C;
+    margin-bottom:18px;
+}
+
+/* Título del mes, ej. "julio de 2026" */
+#cotizador .fc-toolbar-title{
+    font-size: 33px ;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: #0A0A0A;
+    text-transform: capitalize;
+}
+
+.bloque-calendario .fc-toolbar{
+    margin-bottom:20px;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+/* Botones prev / next / today */
+.bloque-calendario .fc-button{
+    background:#0A0A0A !important;
+    border:none !important;
+    color:#C9A84C !important;
+    text-transform:capitalize;
+    box-shadow:none !important;
+    padding:6px 14px !important;
+    border-radius:4px !important;
+    transition:.3s;
+}
+.bloque-calendario .fc-button:hover{
+    background:#C9A84C !important;
+    color:#0A0A0A !important;
+}
+.bloque-calendario .fc-button:disabled{ opacity:.4; }
+
+/* Cabecera de días: dom, lun, mar... */
+.bloque-calendario .fc-col-header-cell{
+    background:#0A0A0A;
+    padding:10px 0;
+}
+.bloque-calendario .fc-col-header-cell-cushion{
+    color:#C9A84C;
+    font-size:12px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    text-decoration:none;
+}
+
+/* Celdas de los días */
+.bloque-calendario .fc-daygrid-day-number{
+    color:#0A0A0A;
+    font-size:14px;
+    font-weight:600;
+    padding:8px;
+    text-decoration:none;
+}
+.bloque-calendario .fc-day-today{
+    background:rgba(201,168,76,.18) !important;
+}
+.bloque-calendario td, .bloque-calendario th{
+    border-color:rgba(201,168,76,.25) !important;
+}
+
+/* Etiqueta "Ocupado" */
+.bloque-calendario .fc-event{
+    background:#c0392b;
+    border:none;
+    border-radius:4px;
+    padding:2px 6px;
+    font-size:11px;
+    font-family:'Nunito', sans-serif;
+}
+
+.fecha-elegida-texto{
+    margin-top:14px;
+    font-weight:bold;
+    color:black;
+    font-size: x-large;
+    
+}
+
+/* .bloque-calendario .fc-toolbar-title {
+    font-size: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: #0A0A0A;
+}
+.bloque-calendario{
+  padding: 20px;
+}
+.tituloCalendario{
+  padding-bottom: 25px;
+  font-size: 29px;
+} */
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* El nav en móvil ahora se controla desde stylecabecerapie.css */
+}
+
+
+
+
+
+

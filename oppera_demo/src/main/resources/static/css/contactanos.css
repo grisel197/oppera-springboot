@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+.contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  background: #c9a84c;
+  padding: 90px;
+  margin-top: 50px;
+}
+
+.contacto-texto {
+  width: 50%;
+  color: white;
+
+}
+
+.contacto-texto h2 {
+  font-size: 50px;
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+}
+
+.contacto-texto p {
+  font-size: 17px;
+  color: black;
+  margin-bottom: 18px;
+  margin-top: 10px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.formulario {
+  width: 50%;
+  background: #1F1F1F;
+  padding: 50px;
+  border-radius: 12px;
+  border: 2px solid #c9a84c;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formulario label {
+  color: #e8c97a;
+  font-family: 'Nunito', sans-serif;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  padding: 10px;  
+  background: #242424;
+  border: 1px solid #c9a84c;
+  border-radius: 8px;
+  color: white;
+  font-family: 'Jost', sans-serif;
+}
+
+.formulario textarea {
+  min-height: 100px;
+}
+
+.formulario input[type="date"] {
+  color-scheme: dark;
+}
+
+.boton {
+  background-color: #242424;
+  color: white;
+  border: 1px solid #c9a84c; /* Añade esto para el borde */
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.boton:hover {
+  background: #e8c97a;
+  color: black;
+  border-color: #e8c97a;
+}
+
+@media (max-width: 768px) {
+  .contacto {
+    flex-direction: column;
+    padding: 140px 6% 70px;
+  }
+  .contacto-texto,
+  .formulario {
+    width: 100%;
+  }
+  .contacto-texto h2 {
+    font-size: 38px;
+  }
+}

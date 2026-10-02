@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oppera | Inicio</title>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="/css/inicio.css">
+    <link rel="stylesheet" href="/css/stylecabecerapie.css">
+    <!-- Tipografia -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Jost:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+     
+    <!-- Framework Boostrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+
+    <header th:replace="~{/fragments/template :: header('inicio')}" ></header> <!--del html template -->
+
+    <!-- Carrusel con Bootstrap -->
+     <main>
+      <section class="hero-carrusel">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          </div>
+
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <img class="bg-img" src="img/slide2Acomodadores.jpg" alt="anfitriona señalando mesa" />
+              <div class="overlay"></div>
+              <div class="slide-content slide-content-ancho">
+                <h1>Agencia de <span class="highlight">Acomodadores, </span> y personal para eventos</h1>
+                <p>Más de 20 años brindando talento para activaciones BTL, eventos corporativos y publicidad presencial en todo el país.</p>
+                <a href="contactanos.html" class="btn-animado">Contáctanos<span>→</span></a>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img class="bg-img" src="img/Acomodadores.jpg" alt="acomodador guiando a las personas" />
+              <div class="overlay"></div>
+              <div class="slide-content">
+                <h1>Acomodadores</h1>
+                <p>Guiamos a tu público con orden y profesionalismo, asegurando que cada asistente llegue a su lugar sin contratiempos.</p>
+                <a href="servicios">Ver más<span>→</span></a>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img class="bg-img" src="img/Escaner.jpg" alt="escáner QR en evento" />
+              <div class="overlay"></div>
+              <div class="slide-content">
+                <h1>Recepcionista de entradas</h1>
+                <p>Validamos las entradas y ofrecemos un control de acceso ágil. Reducimos las filas y mejoramos la experiencia de entrada a tu evento.</p>
+                <a href="servicios">Ver más<span>→</span></a>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img class="bg-img" src="img/Promotoras.png" alt="promotor asistiendo al público" />
+              <div class="overlay"></div>
+              <div class="slide-content">
+                <h1>Promotores</h1>
+                <p>Personal encargado de representar la imagen de la marca durante el evento, interactuando con los asistentes, promocionando productos o servicios y apoyando en la atención y el proceso de venta.</p>
+                <a href="servicios">Ver más<span>→</span></a>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img class="bg-img" src="img/Volantera.jpg" alt="volantero entregando información" />
+              <div class="overlay"></div>
+              <div class="slide-content">
+                <h1>Volanteros</h1>
+                <p>Reparten volantes y material promocional, informan al público y ayudan a dar mayor visibilidad a la marca o evento.</p>
+                <a href="servicios">Ver más<span>→</span></a>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+
+        </div>
+    </section>
+    
+
+
+  <section class="trayectoria">
+        
+      <div class="encabezado">
+        <h2>Nuestra trayectoria</h2>
+        <p>
+          Más de 7 años participando en eventos corporativos, teatrales <br />
+          y conciertos en todo el Perú.
+        </p>
+      </div>
+
+          <div class="cards">
+            <div class="tray-card">
+              <img src="img/grillaImg4.jpg" alt="Teatro Plaza Norte" />
+              <div class="tray-card-overlay"></div>
+              <h3>Teatro Plaza Norte</h3>
+            </div>
+
+            <div class="tray-card">
+              <img src="img/grillaImg5.jpg" alt="Teatro Municipal de Lima" />
+              <div class="tray-card-overlay"></div>
+              <h3>Teatro Municipal de Lima</h3>
+            </div>
+
+            <div class="tray-card">
+              <img src="img/grillaImg6.jpg" alt="Teatro Segura" />
+              <div class="tray-card-overlay"></div>
+              <h3>Teatro Segura</h3>
+            </div>
+
+            <div class="tray-card">
+              <img src="img/grillaImg15.jpg" alt="Teatro NOS" />
+              <div class="tray-card-overlay"></div>
+              <h3>Teatro NOS</h3>
+            </div>
+
+            <div class="tray-card">
+              <img src="img/grillaImg12.jpg" alt="Parque de la Exposición" />
+              <div class="tray-card-overlay"></div>
+              <h3>Parque de la Exposición</h3>
+            </div>
+
+            <div class="tray-card">
+              <img src="img/grillaImg9.jpg" alt="Costa 21" />
+              <div class="tray-card-overlay"></div>
+              <h3>Costa 21</h3>
+            </div>
+
+            <div class="tray-card">
+              <img src="img/grillaImg16.jpg" alt="Teatro Municipal de Lima" />
+              <div class="tray-card-overlay"></div>
+              <h3>Teatro Municipal de Lima</h3>
+            </div>
+
+            <div class="tray-card">
+              <img src="img/grillaImg5.jpg" alt="Teatro Surco" />
+              <div class="tray-card-overlay"></div>
+              <h3>Teatro Surco</h3>
+            </div>
+
+            <div class="tray-card">
+              <img src="img/grillaImg19.jpg" alt="Teatro Plaza Norte" />
+              <div class="tray-card-overlay"></div>
+              <h3>Teatro Plaza Norte</h3>
+            </div>
+
+            <div class="tray-card">
+              <img src="img/grillaImg17.jpg" alt="Teatro San Antonio de Padua" />
+              <div class="tray-card-overlay"></div>
+              <h3>Teatro San Antonio de Padua</h3>
+            </div>
+          </div>
+
+          <button id="btnGaleria" class="btn-galeria" type="button" onclick="abrirModal()">
+            Ver más fotos<span>→</span>
+          </button>
+      </section>
+        
+        <div id="modalGaleria" class="modal-galeria">
+        <div class="modal-contenido">
+          <button
+            id="cerrarGaleria"
+            class="cerrar-modal"
+            type="button"
+            onclick="cerrarModal()"
+          >
+            &times;
+          </button>
+          <h3>Lugares donde hemos trabajado</h3>
+          <div id="gridGaleria" class="grid-galeria"></div>
+          <div class="paginacion">
+            <button
+              id="btnAnterior"
+              class="pag-btn"
+              type="button"
+              onclick="paginaAnterior()"
+            >
+              ‹ Anterior
+            </button>
+            <span id="numPagina">Página 1 de 1</span>
+            <button
+              id="btnSiguiente"
+              class="pag-btn"
+              type="button"
+              onclick="paginaSiguiente()"
+            >
+              Siguiente ›
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section class="eligenos">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="minicards">
+
+          <div class="minicard">
+            <div class="icono">
+              <svg viewBox="0 0 24 24"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg>
+            </div>
+            <h3>Personal capacitado</h3>
+            <p>Nuestro equipo recibe formación constante en atención al cliente y protocolo, listo para cualquier tipo de evento.</p>
+          </div>
+
+          <div class="minicard">
+            <div class="icono">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+            </div>
+            <h3>Atención profesional</h3>
+            <p>Cuidamos cada detalle para que tus invitados vivan una experiencia elegante y sin contratiempos.</p>
+          </div>
+
+          <div class="minicard">
+            <div class="icono">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </div>
+            <h3>Cobertura nacional</h3>
+            <p>Trabajamos en Lima y en las principales ciudades del país, sin importar el tamaño de tu evento.</p>
+          </div>
+
+        </div>
+      </section>
+    
+      <footer th:replace="/fragments/template :: footer"></footer> <!--del html template -->
+    
+    <!-- <footer>
+      <div class="footer-contenedor">
+
+        <div class="footer-col">
+          <span class="footer-logo">Oppera</span>
+          <p>
+            Personal especializado para teatros, conciertos y eventos,
+            ofreciendo una atención elegante y profesional en todo el Perú.
+          </p>
+          <div class="footer-redes">
+            <a href="https://www.facebook.com/p/opperape-61553258675941/" aria-label="Facebook">
+              <img width="16px" src="img/facebook.png" alt="facebook" />
+            </a>
+            <a href="https://www.instagram.com/oppera.pe/" aria-label="Instagram">
+              <img width="16px" src="img/instagram.png" alt="instagram" />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Servicios</h3>
+          <ul>
+            <li><a href="servicios.html">Anfitriones</a></li>
+            <li><a href="servicios.html">Acomodadores</a></li>
+            <li><a href="servicios.html">Escáner QR</a></li>
+            <li><a href="servicios.html">Orientadores</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Enlaces</h3>
+          <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="cotizador.html">Cotizador</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <ul class="footer-contacto">
+            <li>Lima, Perú</li>
+            <li>+51 998 976 954</li>
+            <li>contacto@oppera.pe</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Oppera. Todos los derechos reservados.</p>
+      </div>
+    </footer> -->
+
+    <script>
+      const fotosGaleria = [
+        { src: "img/Tclaretiano.jpg", alt: "Teatro Claretiano" },
+        { src: "img/Tunife2.jpg", alt: "Teatro UNIFE" },
+        { src: "img/Vllosa.jpg", alt: "Teatro Vargas Llosa" },
+        { src: "img/Tmarsano.jpg", alt: "Teatro Marsano" },
+        { src: "img/Tmiraflo.jpg", alt: "Teatro Auditorio Miraflores" },
+        { src: "img/Tchino.jpg", alt: "Teatro chino" },
+        { src: "img/Sursu.jpg", alt: "Santa Ursula" },
+        { src: "img/SAgus.jpg", alt: "San Agustin" },
+        { src: "img/UnM.jpg", alt: "Universidad Nacional de Música" },
+        { src: "img/Mcarvajal.jpg", alt: "Melitón Carvajal" },
+        { src: "img/Cespa.jpg", alt: "Centro Español" },
+        { src: "img/grillaImg7H.jpg", alt: "Estadio y coliseo" },
+      ];
+
+      let fotosPorPagina = 6;
+      let paginaActual = 1;
+      let totalPaginas = Math.ceil(fotosGaleria.length / fotosPorPagina);
+
+      function abrirModal() {
+        paginaActual = 1;
+        mostrarFotos();
+        document.getElementById("modalGaleria").classList.add("activo");
+      }
+
+      function cerrarModal() {
+        document.getElementById("modalGaleria").classList.remove("activo");
+      }
+
+      function mostrarFotos() {
+        let inicio = (paginaActual - 1) * fotosPorPagina;
+        let fin = inicio + fotosPorPagina;
+        let fotosPagina = fotosGaleria.slice(inicio, fin);
+
+        let html = "";
+        for (let i = 0; i < fotosPagina.length; i++) {
+          html += "<figure class='foto-galeria'>";
+          html +=
+            "<img src='" +
+            fotosPagina[i].src +
+            "' alt='" +
+            fotosPagina[i].alt +
+            "'>";
+          html += "<figcaption>" + fotosPagina[i].alt + "</figcaption>";
+          html += "</figure>";
+        }
+
+        document.getElementById("gridGaleria").innerHTML = html;
+        document.getElementById("numPagina").innerHTML =
+          "Página " + paginaActual + " de " + totalPaginas;
+
+        document.getElementById("btnAnterior").disabled = paginaActual == 1;
+        document.getElementById("btnSiguiente").disabled =
+          paginaActual == totalPaginas;
+      }
+
+      function paginaAnterior() {
+        if (paginaActual > 1) {
+          paginaActual = paginaActual - 1;
+          mostrarFotos();
+        }
+      }
+
+      function paginaSiguiente() {
+        if (paginaActual < totalPaginas) {
+          paginaActual = paginaActual + 1;
+          mostrarFotos();
+        }
+      }
+
+      /* ---- CARRUSEL DEL HEADER CON SWIPER ---- */
+      const heroSwiper = new Swiper("#heroSwiper", {
+        loop: true,
+        speed: 800,
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          slideChangeTransitionStart: function () {
+            const slideVisible = this.slides[this.activeIndex];
+            const contenido = slideVisible.querySelector(".slide-content");
+            contenido.classList.remove("activa");
+          },
+          slideChangeTransitionEnd: function () {
+            const slideVisible = this.slides[this.activeIndex];
+            const contenido = slideVisible.querySelector(".slide-content");
+            void contenido.offsetWidth;
+            contenido.classList.add("activa");
+          },
+        },
+      });
+      
+    </script>
+     <!-- Bootstrap JS con Popper incluido -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

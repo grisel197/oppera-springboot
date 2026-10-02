@@ -1,0 +1,84 @@
+/* ===== Sección Testimonios ===== */
+.testimonios-section {
+  background-color: rgb(35, 35, 35);
+  color: #fff;
+}
+
+.testimonios-subtitle {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C9A84C;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonios-titulo {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.testimonio-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.testimonio-card:hover {
+  border-color: #C9A84C;
+  transform: translateY(-6px);
+}
+
+.testimonio-quote {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.5rem;
+  color: #C9A84C;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.testimonio-texto {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.testimonio-estrellas {
+  color: #C9A84C;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.testimonio-autor {
+  border-top: 1px solid rgba(201, 168, 76, 0.25);
+  padding-top: 1rem;
+}
+
+.autor-nombre {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.autor-rol {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
